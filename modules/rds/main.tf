@@ -1,5 +1,5 @@
 resource "aws_db_subnet_group" "prashansa_db_subnet_group" {
-  name       = "db_subnet_group"
+  name       = "prashansa_db_subnet_group"
   subnet_ids = [var.prashansa_terraform_subnet_private_1,var.prashansa_terraform_subnet_private_2]
 
   tags = {

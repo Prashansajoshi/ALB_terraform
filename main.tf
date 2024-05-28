@@ -59,10 +59,10 @@ module "template_files"{
   base_dir = "${path.module}/website"
 }
 
-module "s3" {
-    source = "./modules/s3"
-    template_files = module.template_files.files
-}
+# module "s3" {
+#     source = "./modules/s3"
+#     template_files = module.template_files.files
+# }
 
 module "rds" {
     source = "./modules/rds"

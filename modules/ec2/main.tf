@@ -1,4 +1,4 @@
-resource "aws_instance" "_terraform_ec2" {
+resource "aws_instance" "prashansa_terraform_ec2" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name = var.key_name

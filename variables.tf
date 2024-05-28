@@ -47,7 +47,7 @@ variable "instance_type" {
 
 variable "key_name" {
     description = "default keypair"
-    default = "prashana-key"
+    default = "prashansa-key"
 }
 
 variable "availability_zone_1" {
