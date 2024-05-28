@@ -48,10 +48,11 @@ module "rt_association" {
     ami = var.ami
     instance_type = var.instance_type
     key_name = var.key_name
-    #security_group_id = module.security_group.security_group_id
+    security_group_id = module.security_group.security_group_id
     prashansa_terraform_subnet_1 = module.subnet.public_subnet_1
     prashansa_terraform_subnet_2 = module.subnet.public_subnet_2
 }
+
 
 module "template_files"{
   source = "hashicorp/dir/template"
