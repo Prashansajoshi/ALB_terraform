@@ -3,5 +3,9 @@ resource "aws_vpc" "prashansa_terraform_vpc" {
 
   tags = {
     Name = "prashansa_terraform_vpc"
+    silo = "intern2"
+    owner = "prashansa.joshi"
+    terraform = "true"
+    environment = "dev"
   }
 }

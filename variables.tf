@@ -1,32 +1,28 @@
-variable "region" {
-    default = "us-east-1"
-}
-
 variable "vpc_cidr" {
     description = "CIDR block for the VPC"
     default = "10.0.0.0/16"  
     type = string
 }
 
-variable "prashansa_public_subnet_cidr1" {
+variable "subnet_cidr" {
     description = "value of subnet cidr"
     default = "10.0.1.0/24"
     type = string
 }
 
-variable "prashansa_public_subnet_cidr2" {
+variable "subnet_cidr_public_2" {
     description = "value of public subnet cidr 2"
     default = "10.0.2.0/24"
     type = string
 }
 
-variable "prashansa_private_subnet_cidr1" {
+variable "subnet_cidr_private_1" {
     description = "value of private subnet cidr 1"
     default = "10.0.3.0/24"
     type = string
 }
 
-variable "prashansa_private_subnet_cidr2" {
+variable "subnet_cidr_private_2" {
     description = "value of private subnet cidr 2"
     default = "10.0.4.0/24"
     type = string
@@ -51,7 +47,7 @@ variable "instance_type" {
 
 variable "key_name" {
     description = "default keypair"
-    default = "prashansa-key"
+    default = "prashana-key"
 }
 
 variable "availability_zone_1" {

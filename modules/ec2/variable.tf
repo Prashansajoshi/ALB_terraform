@@ -10,8 +10,8 @@ variable "key_name" {
 variable "security_group_id" {
 }
 
-variable "sameep_terraform_subnet_1" {
+variable "prashansa_terraform_subnet_1" {
 }
 
-variable "sameep_terraform_subnet_2" {
+variable "prashansa_terraform_subnet_2" {
 }

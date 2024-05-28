@@ -1,13 +1,13 @@
-resource "aws_instance" "prashansa_ec2" {
+resource "aws_instance" "_terraform_ec2" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name = var.key_name
   vpc_security_group_ids = [var.security_group_id] # Attach the security group
-  subnet_id = var.prashansa_public_subnet_cidr1.id
+  subnet_id = var.prashansa_terraform_subnet_1
   associate_public_ip_address = true
 
   tags = {
-    Name = "prashansa_ec2"
+    Name = "prashansa_terraform_webserver_public_1"
     silo = "intern2"
     owner = "prashansa.joshi"
     terraform = "true"
@@ -15,16 +15,16 @@ resource "aws_instance" "prashansa_ec2" {
   }
 }
 
-resource "aws_instance" "instance_type" {
+resource "aws_instance" "prashansa_terraform_ec2_2" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name = var.key_name
   vpc_security_group_ids = [var.security_group_id] # Attach the security group
-  subnet_id = var.prashansa_public_subnet_cidr2.id
+  subnet_id = var.prashansa_terraform_subnet_2
   associate_public_ip_address = true
 
   tags = {
-    Name = "prashansa_instance"
+    Name = "prashansa_terraform_webserver_public_2"
     silo = "intern2"
     owner = "prashansa.joshi"
     terraform = "true"
