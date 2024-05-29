@@ -70,3 +70,14 @@ module "rds" {
     prashansa_terraform_subnet_private_1 = module.subnet.private_subnet_1
     prashansa_terraform_subnet_private_2 = module.subnet.private_subnet_2
 }
+
+module "alb" {
+    source = "./modules/load_balancer"
+    sg_id = module.security_group.security_group_id
+    public_subnet_1 = module.subnet.public_subnet_1
+    public_subnet_2 = module.subnet.public_subnet_2
+    ec2_id_1 = module.ec2.ec2_id_1
+    ec2_id_2 = module.ec2.ec2_id_2
+    vpc_id = module.vpc.prashansa_terraform_vpc
+    # subnet_id = module.subnet.public_subnet_1
+}

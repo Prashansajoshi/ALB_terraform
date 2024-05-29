@@ -7,12 +7,19 @@ resource "aws_instance" "prashansa_terraform_ec2" {
   associate_public_ip_address = true
 
   tags = {
-    Name = "prashansa_terraform_webserver_public_1"
+    Name = "prashansa_terraform__public_1"
     silo = "intern2"
     owner = "prashansa.joshi"
     terraform = "true"
     environment = "dev"
   }
+  user_data = <<-EOF
+             #!/bin/bash
+             sudo apt-get update
+             sudo apt-get install nginx -y
+            #  sudo systemctl start nginx
+            #  sudo systemctl enable nginx
+             EOF
 }
 
 resource "aws_instance" "prashansa_terraform_ec2_2" {
@@ -24,10 +31,17 @@ resource "aws_instance" "prashansa_terraform_ec2_2" {
   associate_public_ip_address = true
 
   tags = {
-    Name = "prashansa_terraform_webserver_public_2"
+    Name = "prashansa_terraform__public_2"
     silo = "intern2"
     owner = "prashansa.joshi"
     terraform = "true"
     environment = "dev"
   }
+    user_data = <<-EOF
+             #!/bin/bash
+             sudo apt-get update
+             sudo apt-get install apache2 -y
+            #  sudo systemctl start nginx
+            #  sudo systemctl enable nginx
+             EOF
 }

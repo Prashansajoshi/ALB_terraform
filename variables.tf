@@ -36,7 +36,7 @@ variable "all_cidr_block" {
 
 variable "ami" {
     description = "default ami"
-    default = "ami-06d38e519dc8ebc68"
+    default = "ami-04b70fa74e45c3917"
     type = string
 }
 
